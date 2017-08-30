@@ -1,5 +1,5 @@
 /**
- * TPL_Dashboard_CustomLinks
+ * tpl_Dashboard_CustomLinks
  *
  * Custom Links on Welcome Dashboard
  *
