@@ -1,5 +1,5 @@
 /**
- * DashboardLinks 3.1 
+ * DashboardLinks 
  *
  * Dashboard Links widget plugin for Evolution CMS
  * @author    Nicola Lambathakis
