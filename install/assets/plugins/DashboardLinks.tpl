@@ -14,7 +14,7 @@
  * @reportissues https://github.com/Nicola1971/WelcomeStats-EvoDashboard-Plugin/issues
  * @link        
  * @lastupdate  30/08/2017
- * @internal    @properties &wdgVisibility=Show widget for:;menu;All,AdminOnly;show &wdgTitle= Stats widget Title:;string;Shortcuts  &wdgicon= widget icon:;string;fa-link  &wdgposition=widget position:;list;1,2,3,4,5,6,7,8,9,10;1 &wdgsizex=widget x size:;list;12,6,4,3;12 &WidgetChunk= Widget chunk:;string;tpl_Dashboard_CustomLinks
+ * @internal    @properties &wdgVisibility=Show widget for:;menu;All,AdminOnly;show &wdgTitle= Stats widget Title:;string;Shortcuts  &wdgicon= widget icon:;string;fa-link  &wdgposition=widget position:;text;1 &wdgsizex=widget width:;list;12,6,4,3;12 &WidgetChunk= Widget chunk:;string;tpl_Dashboard_CustomLinks
 */
 // get manager role
 $role = $_SESSION['mgrRole'];          
