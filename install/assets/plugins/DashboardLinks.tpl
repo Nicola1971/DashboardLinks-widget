@@ -14,7 +14,7 @@
  * @reportissues https://github.com/Nicola1971/WelcomeStats-EvoDashboard-Plugin/issues
  * @link        
  * @lastupdate  12/12/2017
- * @internal    @properties &wdgVisibility=Show widget for:;menu;All,AdminOnly,AdminExcluded,ThisRoleOnly,ThisUserOnly;All &ThisRole=Run only for this role:;string;;;(role id) &ThisUser=Run only for this user:;string;;;(username) &wdgTitle= Stats widget Title:;string;Shortcuts  &wdgicon= widget icon:;string;fa-link  &wdgposition=widget position:;text;1 &wdgsizex=widget width:;list;12,6,4,3;12 &WidgetChunk= Widget chunk:;string;tpl_Dashboard_CustomLinks
+ * @internal    @properties &wdgVisibility=Show widget for:;menu;All,AdminOnly,AdminExcluded,ThisRoleOnly,ThisUserOnly;All &ThisRole=Run only for this role:;string;;;(role id) &ThisUser=Run only for this user:;string;;;(username) &wdgTitle= Widget Title:;string;Shortcuts  &wdgicon= widget icon:;string;fa-link  &wdgposition=widget position:;text;1 &wdgsizex=widget width:;list;12,6,4,3;12 &WidgetChunk= Widget chunk:;string;tpl_Dashboard_CustomLinks
 */
 // get manager role
 $internalKey = $modx->getLoginUserID();
