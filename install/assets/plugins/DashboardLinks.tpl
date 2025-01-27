@@ -4,18 +4,24 @@
  * Dashboard Shortcut Links widget plugin for Evolution CMS
  * @author    Nicola Lambathakis
  * @category    plugin
- * @version    3.1
+ * @version    3.2
  * @license	   http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
  * @internal    @events OnManagerWelcomeHome,OnManagerMainFrameHeaderHTMLBlock
  * @internal    @installset base
  * @internal    @modx_category Dashboard
  * @author      Nicola Lambathakis http://www.tattoocms.it/
- * @documentation Requirements: This plugin requires Evolution 1.3.1 or later
- * @reportissues https://github.com/Nicola1971/WelcomeStats-EvoDashboard-Plugin/issues
+ * @documentation Requirements: This plugin requires Evolution 1.4 or later
+ * @reportissues https://github.com/Nicola1971/DashboardLinks-widget/issues
  * @link        
- * @lastupdate  12/12/2017
- * @internal    @properties &wdgVisibility=Show widget for:;menu;All,AdminOnly,AdminExcluded,ThisRoleOnly,ThisUserOnly;All &ThisRole=Run only for this role:;string;;;(role id) &ThisUser=Run only for this user:;string;;;(username) &wdgTitle= Widget Title:;string;Shortcuts  &wdgicon= widget icon:;string;fa-link  &wdgposition=widget position:;text;1 &wdgsizex=widget width:;list;12,6,4,3;12 &WidgetChunk= Widget chunk:;string;tpl_Dashboard_CustomLinks
+ * @lastupdate  27/01/2025
+ * @internal    @properties &wdgVisibility=Show widget for:;menu;All,AdminOnly,AdminExcluded,ThisRoleOnly,ThisUserOnly;All &ThisRole=Run only for this role:;string;;;(role id) &ThisUser=Run only for this user:;string;;;(username) &wdgTitle= Widget Title:;string;Shortcuts  &wdgicon= widget icon:;string;fa-link  &wdgposition=widget position:;text;1 &wdgsizex=widget width:;list;12,6,4,3;6 &WidgetChunk= Widget chunk:;string;tpl_Dashboard_CustomLinks
 */
+$ThisRole = $ThisRole ?? '';
+$ThisUser = $ThisUser ?? '';
+$HeadBG = isset($HeadBG) ? trim($HeadBG) : '';
+$HeadColor = isset($HeadColor) ? trim($HeadColor) : '';
+$BodyBG = isset($BodyBG) ? trim($BodyBG) : '';
+$BodyColor = isset($BodyColor) ? trim($BodyColor) : '';
 // get manager role
 $internalKey = $modx->getLoginUserID();
 $sid = $modx->sid;
@@ -36,7 +42,7 @@ global $modx,$_lang;
 $result = $modx->db->select('id', $this->getFullTableName("site_plugins"), "name='{$modx->event->activePlugin}' AND disabled=0");
 $pluginid = $modx->db->getValue($result);
 if($modx->hasPermission('edit_plugin')) {
-$button_pl_config = '<a data-toggle="tooltip" href="javascript:;" title="' . $_lang["settings_config"] . '" class="text-muted pull-right" onclick="parent.modx.popup({url:\''. MODX_MANAGER_URL.'?a=102&id='.$pluginid.'&tab=1\',title1:\'' . $_lang["settings_config"] . '\',icon:\'fa-cog\',iframe:\'iframe\',selector2:\'#tabConfig\',position:\'center center\',width:\'80%\',height:\'80%\',hide:0,hover:0,overlay:1,overlayclose:1})" ><i class="fa fa-cog"></i> </a>';
+$button_pl_config = '<a data-toggle="tooltip" href="javascript:;" title="' . $_lang["settings_config"] . '" class="text-muted pull-right float-right" onclick="parent.modx.popup({url:\''. MODX_MANAGER_URL.'?a=102&id='.$pluginid.'&tab=1\',title1:\'' . $_lang["settings_config"] . '\',icon:\'fa-cog\',iframe:\'iframe\',selector2:\'#tabConfig\',position:\'center center\',width:\'80%\',height:\'80%\',hide:0,hover:0,overlay:1,overlayclose:1})" ><i class="fa fa-cog"></i> </a>';
 }
 $modx->setPlaceholder('button_pl_config', $button_pl_config);
 /*Widget Box */
